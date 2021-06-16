@@ -1,7 +1,7 @@
 SUMMARY = "RaspberryPi OpenCV movement detection"
 DESCRIPTION = "Recipe for a RaspberryPi SmartCam"
 LICENSE = "CLOSED"
-DEPENDS = "opencv"
+DEPENDS = "curl opencv"
 
 PV = "1.0+git${SRCPV}"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
@@ -11,4 +11,4 @@ SRCREV = "${AUTOREV}"
 
 S = "${WORKDIR}/git/MovementAnalysis"
 
-inherit autotools
+inherit pkgconfig cmake
